@@ -1,1 +1,1 @@
-# landing-page-test-tecnico
+# landing-page-teste-tecnico

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieLand - Os cookies mais deliciosos da cidade!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">Sobre</a>
+            <a href="#products">Produtos</a>
+            <a href="#contact">Contato</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero" id="home">
+            <h1>CookieLand</h1>
+            <p>Os cookies mais deliciosos da cidade!</p>
+            <a href="#products" class="btn">Ver Produtos</a>
+        </div>
+        <section id="about">
+            <h2>Sobre Nós</h2>
+            <p>Somos apaixonados por cookies artesanais, feitos com ingredientes selecionados e muito carinho.
+                Experimente e
+                sinta a diferença!</p>
+        </section>
+        <section id="products">
+            <h2>Nossos Produtos</h2>
+            <div class="products-list">
+                <article class="product">
+                    <img src="assets/images/chocolate-chips-cookie-dough-spoon-top-view.jpg" alt="Cookie Tradicional">
+                    <h3>Cookie Tradicional</h3>
+                    <p>Clássico com gotas de chocolate.</p>
+                </article>
+                <article class="product">
+                    <img src="assets/images/round-cookie.jpg" alt="Cookie de Nutella">
+                    <h3>Cookie de Nutella</h3>
+                    <p>Recheado com Nutella cremosa.</p>
+                </article>
+                <article class="product">
+                    <img src="assets/images/round-cookie.jpg" alt="Cookie de Amendoim">
+                    <h3>Cookie de Amendoim</h3>
+                    <p>Com pedaços de amendoim crocante.</p>
+                </article>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Fale Conosco</h2>
+            <form id="contactForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="submit" class="btn">Enviar</button>
+                <p id="formMessage" class="form-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CookieLand</h3>
+                <p>Os cookies mais deliciosos da cidade, feitos com ingredientes selecionados e muito amor.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p><i class="fa fa-map-marker"></i> Rua dos Cookies, 123 - Centro</p>
+                <p><i class="fa fa-phone"></i> (11) 1234-5678</p>
+                <p><i class="fa fa-envelope"></i> contato@cookieland.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CookieLand. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
