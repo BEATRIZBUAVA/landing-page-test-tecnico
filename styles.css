@@ -16,8 +16,10 @@ body {
   background-color: var(--cream);
   color: var(--gray-800);
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
 
 body,
 .topnav,
@@ -40,7 +42,7 @@ h3 {
 
 .navbar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   position: absolute;
@@ -48,6 +50,22 @@ h3 {
   left: 0;
   right: 0;
   z-index: 1000;
+}
+
+.nav-logo {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 100%;
+  width: auto;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
 }
 
 .nav-menu {
@@ -124,12 +142,7 @@ h3 {
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
-  .hero {
-    background-size: 120% auto;
-    will-change: background-position;
-  }
-}
+
 
 .hero h1 {
   font-size: 3em;
@@ -169,58 +182,11 @@ h3 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 1rem 2rem;
-    flex-direction: column;
-    gap: 1.5rem;
-    background-color: rgba(143, 67, 0, 0.95);
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-item {
-    width: 100%;
-  }
-
-  .nav-link {
-    display: block;
-    padding: 0.5rem 0;
-    font-size: 1.2rem;
-    opacity: 0.85;
-  }
-
-  .nav-link::after {
-    bottom: -2px;
-    height: 1px;
-  }
-
-  .nav-link:hover {
-    opacity: 1;
-  }
-
-  .products-list {
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-  }
-}
-
 main {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 15px 30px 15px;
+  flex: 1 0 auto;
 }
 
 section {
@@ -295,18 +261,6 @@ section {
   opacity: 0.8;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .product {
   animation: fadeInUp 0.6s ease-out;
   animation-fill-mode: backwards;
@@ -359,12 +313,13 @@ section {
   margin-top: 8px;
 }
 
-/* Footer Styles */
 footer {
   background-color: var(--brown);
   color: var(--cream);
   padding: 40px 0 0 0;
   margin-top: 50px;
+  margin-bottom: 0;
+  flex-shrink: 0;
 }
 
 .footer-content {
@@ -449,7 +404,7 @@ footer {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
-/* Footer Responsive */
+
 @media screen and (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
@@ -458,5 +413,80 @@ footer {
 
   .social-links {
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-size: 120% auto;
+    will-change: background-position;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-logo {
+    height: 32px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: rgba(143, 67, 0, 0.95);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-right {
+    flex-direction: row-reverse;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    opacity: 0.85;
+  }
+
+  .nav-link::after {
+    bottom: -2px;
+    height: 1px;
+  }
+
+  .nav-link:hover {
+    opacity: 1;
+  }
+
+  .products-list {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
   }
 }

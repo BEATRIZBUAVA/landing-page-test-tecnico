@@ -3,7 +3,6 @@ function toggleMenu() {
   navMenu.classList.toggle('active');
 }
 
-// Fechar menu ao clicar em um link
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Efeito Parallax apenas no desktop
   window.addEventListener('scroll', () => {
     if (window.innerWidth >= 768) {
       const scrolled = window.pageYOffset;
@@ -22,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Reset posição do background no mobile
+
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
       const hero = document.querySelector('.hero');
@@ -36,7 +34,6 @@ const handleSubmit = (e) => {
   const email = document.getElementById('email').value;
   const phone = document.getElementById('phone').value;
 
-  // Email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!name || !email || !phone) {
